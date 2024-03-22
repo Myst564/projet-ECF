@@ -1,0 +1,136 @@
+/* Importation des styles de base de Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Styles personnalisés */
+
+/* Fond et header aux couleurs de Rick and Morty */
+body {
+    background-color: #0f9d58; /* Couleur de fond sombre */
+}
+
+nav {
+    background-color: #2d2f30; /* Couleur de fond du header */
+    color: #fff; /* Couleur du texte du header */
+}
+
+/* Police "cartoon" pour les titres et le texte */
+h2, h3, .card p {
+    font-family: 'Roboto', sans-serif; /* Utilisation de la police Roboto pour les titres */
+    color: #f2f2f2; /* Couleur de texte pour les titres */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour donner un effet cartoon */
+}
+
+/* Titre */ 
+.text-2xl {
+    margin: 0 auto; /* Pour centrer horizontalement*/
+    text-align: center; /* Centrer le texte*/
+}
+
+/* Logo de rick and Morty*/
+.logo {
+    width: 100px;
+    height: auto;
+    margin: 0 auto; /* Pour centrer horizontalement*/
+    display: block; /* Pour centrer verticalement*/
+    position: absolute; /* Position absolue pour placer le logo*/
+    margin-top: 2px; /* Espacement par rapport au haut de la page*/
+    margin-left: 10px; /* Positionné au coin supérieur gauche*/
+    transform: translate(-200%); /* Centrage Horizontal*/
+}
+
+/* Boutons */
+.btn {
+    padding: 8px 12px;
+    background-color: #5f63ad; /* Couleur de fond des boutons */
+    color: #fff; /* Couleur du texte des boutons */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif; /* Police "cartoon" pour les boutons*/
+    font-size: 14px; /* Réduire la taille de la police */
+    margin: 5px; /* Marge entre les boutons */
+    width: calc(50% - 10px); /* Largeur de 50% moins la marge */
+}
+
+/* Affichage du bouton "Random Unknow Character" */
+#unknownButton {
+    display: inline-block; 
+}
+
+.btn:hover {
+    background-color: #7687cc; /* Couleur de fond des boutons au survol */
+}
+
+/* Cartes des personnages */
+.card {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 16px;
+    transition: transform 0.3s ease;
+    background-color: #1f2122; /* Couleur de fond des cartes */
+    color: #f2f2f2; /* Couleur du texte des cartes */
+}
+
+/* Ajout de défilement vertical pour les cartes */
+.card {
+    overflow-y: auto; /* Défilement vertical*/
+    max-height: 400px; /*Hauteur maximale de la carte*/
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Ajout d'une touche de vert */
+
+nav {
+    background-color: #2d2f30; /* Header */
+}
+
+.btn, .card {
+    border-color: #3f8749; /* Bordures des boutons et des cartes */
+}
+
+.btn {
+    background-color: #5f63ad; /* Boutons */
+    width: calc(100% - 10px); /* Largeur de 100% de moins la marge */ 
+}
+
+.btn:hover {
+    background-color: #7687cc; /* Boutons au survol */
+}
+
+.card {
+    background-color: #1f2122; /* Cartes */
+}
+
+/* Media Queries pour les appareils mobiles*/
+@media (max-width: 352px) {
+    /* Réorganiser le contenu pour les appareils mobiles */
+    .container {
+        padding: 0 20px; /* Ajoutez un padding sur les côtés pour les petits écrans*/
+    }
+
+    .btn {
+        font-size: 14px; /* Réduire la taille de la police des boutons pour les petits écrans */
+        width: calc(100% - 10px); /* Largeur de 100% moins la marge */
+    }
+
+    .card {
+        width: 100; /* Ajustez la largeur des cartes pour qu'elles occupent toute la largeur de l'écran*/
+        margin-bottom: 20px; /* Ajustez de l'espace entre les cartes pour les petits écrans*/
+    }
+
+    h2 {
+        font-size: 24px; /* Réduire la taille de la police des titres pour les petits écrans */
+    }
+
+    .logo {
+        width: 80px; /* Ajustez la taille du logo pour l'écran plus petit*/
+        margin-top: 5px; /* Ajustez légèrement la marge supérieure du logo */
+    }
+}
+
